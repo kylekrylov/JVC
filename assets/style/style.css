@@ -449,12 +449,12 @@ textarea {
 }
 
 .block-FH7 .block-jvc__gold-color::before {
-  background: #AD8A40;
+  background: #ad8a40;
 }
 
 .block-FH7 .block-jvc__gold-color:hover,
 .block-FH7 .block-jvc__gold-color:active {
-  border: 1px solid #AD8A40;
+  border: 1px solid #ad8a40;
 }
 
 .item-benefits-list {
@@ -682,6 +682,11 @@ textarea {
     font-size: 14px;
     line-height: 17px;
     max-width: 400px;
+  }
+
+  .block-jvc__item-list::after,
+  .block-jvc__item-list::before {
+    top: 2px;
   }
 
   .block-jvc__main-img {
