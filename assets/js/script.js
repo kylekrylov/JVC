@@ -4,8 +4,6 @@ for (i = 0 ; i<accordion.length; i++){
       this.classList.toggle('active')
    })
 };
-
-// плавный скрол до якоря
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
     smoothLink.addEventListener('click', function (e) {
@@ -18,8 +16,6 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
-
-
 window.onscroll = function() {
    let scrollElem = document.getElementById("scrollToTop");
    if (window.scrollY > document.documentElement.clientHeight) {
@@ -28,7 +24,6 @@ window.onscroll = function() {
        scrollElem.style.opacity = "0";
    }
 };
-
 let timeOut;
 function goUp() {
    let top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
@@ -37,3 +32,8 @@ function goUp() {
       timeOut = setTimeout('goUp()',10);
    } else clearTimeout(timeOut);
 };
+
+function changeImage(image){
+   document.querySelector('.block-jvc__main-img').src = image;
+}
+
