@@ -33,7 +33,13 @@ function goUp() {
    } else clearTimeout(timeOut);
 };
 
-function changeImage(image){
-   document.querySelector('.block-jvc__main-img').src = image;
-}
+// function changeImage(image){
+//    document.querySelector('.block-jvc__main-img').src = image;
+// }
 
+const images = document.querySelectorAll('.block-jvc__main-img');
+images.forEach( ( image ) => {
+  function changeImage( newImage ){
+    image.src = newImage;
+   }
+});
