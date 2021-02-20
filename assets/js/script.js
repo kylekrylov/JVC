@@ -4,12 +4,12 @@ for (i = 0; i < accordion.length; i++) {
       this.classList.toggle('active')
    })
 };
+
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
    smoothLink.addEventListener('click', function (e) {
       e.preventDefault();
       const id = smoothLink.getAttribute('href');
-
       document.querySelector(id).scrollIntoView({
          behavior: 'smooth',
          block: 'start'
@@ -34,10 +34,28 @@ function goUp() {
 };
 
 
-const colors = document.querySelectorAll( '.color' );
-colors.forEach( ( color ) => {
-  color.addEventListener( 'mouseover', () =>
-  {
-    color.closest( '.block-jvc__main' ).querySelector( '.block-jvc__main-img' ).src = color.getAttribute( 'data-image' );
-  });
+const colors = document.querySelectorAll('.color');
+colors.forEach((color) => {
+   color.addEventListener('mouseover', () => {
+      color.closest('.block-jvc__main').querySelector('.block-jvc__main-img').src = color.getAttribute('data-image');
+   });
+
+   // color.addEventListener('click', (event) => {
+   //    document.querySelectorAll('.color').forEach((item) => {
+   //       item.classList.remove('active')
+   //    });
+   //    event.target.classList.add('active');
+   // });
+
+   color.addEventListener('click', (event) => {
+      color.closest('.block-jvc__main').querySelectorAll('.color').forEach((item) => {
+         item.classList.remove('active')
+         console.log('<- del?')
+      });
+      event.target.classList.add('active');
+   });
+
+
+
+
 });
