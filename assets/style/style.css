@@ -212,6 +212,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid white;
+  cursor: pointer;
   -webkit-transition: 0.6s ease-in-out;
   -o-transition: 0.6s ease-in-out;
   transition: 0.6s ease-in-out;
@@ -671,13 +672,8 @@ textarea {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   opacity: 0;
-}
-
-.scrollToTop {
   border: 2px solid #000;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
