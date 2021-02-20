@@ -29,16 +29,12 @@ function goUp() {
    let top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
    if (top > 0) {
       window.scrollBy(0, -100);
-      timeOut = setTimeout('goUp()', 10);
+      timeOut = setTimeout('goUp()', 5);
    } else clearTimeout(timeOut);
 };
 
-// function changeImage(image){
-//    document.querySelector('.block-jvc__main-img').src = image;
-// }
 
 const colors = document.querySelectorAll( '.color' );
-
 colors.forEach( ( color ) => {
   color.addEventListener( 'mouseover', () =>
   {
